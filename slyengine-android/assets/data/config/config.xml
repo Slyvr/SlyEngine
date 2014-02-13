@@ -1,0 +1,13 @@
+<root>
+	<slyengine>
+		<graphics_settings>
+			<default_screen_width>1024</default_screen_width>
+			<default_screen_height>768</default_screen_height>
+			<default_background_color>
+				<r>0</r>
+				<g>0</g>
+				<b>0</b>
+			</default_background_color>
+		</graphics_settings>
+	</slyengine>
+</root>
