@@ -9,8 +9,10 @@ import com.slyvronline.engine.objects.entity.Entity;
 
 public class Property extends GameObject implements PropertyInterface, Serializable {
 	
-	private String name;
-
+	public Property() {
+		
+	}
+	
 	@Override
 	public void update(Entity e) {
 		

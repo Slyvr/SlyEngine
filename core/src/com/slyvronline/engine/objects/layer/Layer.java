@@ -13,6 +13,10 @@ public class Layer extends GameObject implements LayerInterface, Serializable {
 
 	private ArrayList<Entity> entities;
 
+	public Layer() {
+		entities = new ArrayList<Entity>();
+	}
+	
 	@Override
 	public void update(Chunk c) {
 		for(Entity e : entities) {
@@ -29,4 +33,14 @@ public class Layer extends GameObject implements LayerInterface, Serializable {
 	public void read(Json json, JsonValue jsonData) {
 		
 	}
+
+	public ArrayList<Entity> getEntities() {
+		return entities;
+	}
+
+	public void setEntities(ArrayList<Entity> entities) {
+		this.entities = entities;
+	}
+	
+	
 }

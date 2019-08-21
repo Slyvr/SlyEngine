@@ -12,7 +12,12 @@ import com.slyvronline.engine.objects.level.Level;
 public class Chunk extends GameObject implements ChunkInterface, Serializable {
 
 	private ArrayList<Layer> layers;
+	private Layer currentLayer;
 
+	public Chunk() {
+		layers = new ArrayList<Layer>();
+	}
+	
 	@Override
 	public void update(Level l) {
 		for(Layer layer : layers) {
@@ -29,4 +34,22 @@ public class Chunk extends GameObject implements ChunkInterface, Serializable {
 	public void read(Json json, JsonValue jsonData) {
 		
 	}
+
+	public ArrayList<Layer> getLayers() {
+		return layers;
+	}
+
+	public void setLayers(ArrayList<Layer> layers) {
+		this.layers = layers;
+	}
+
+	public Layer getCurrentLayer() {
+		return currentLayer;
+	}
+
+	public void setCurrentLayer(Layer currentLayer) {
+		this.currentLayer = currentLayer;
+	}
+	
+	
 }

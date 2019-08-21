@@ -12,12 +12,19 @@ import com.slyvronline.engine.objects.game.GameSession;
 public class Level extends GameObject implements LevelInterface, Serializable {
 
 	private ArrayList<Chunk> chunks;
+	private Chunk currentChunk;
 
+	
+	public Level() {
+		chunks = new ArrayList<Chunk>();
+	}
+	
 	@Override
 	public void update(GameSession game) {
-		for(Chunk c : chunks) {
+		/*for(Chunk c : chunks) {
 			c.update(this);
-		}
+		}*/
+		currentChunk.update(this);
 	}
 
 	@Override
@@ -29,4 +36,22 @@ public class Level extends GameObject implements LevelInterface, Serializable {
 	public void read(Json json, JsonValue jsonData) {
 		
 	}
+
+	public ArrayList<Chunk> getChunks() {
+		return chunks;
+	}
+
+	public void setChunks(ArrayList<Chunk> chunks) {
+		this.chunks = chunks;
+	}
+
+	public Chunk getCurrentChunk() {
+		return currentChunk;
+	}
+
+	public void setCurrentChunk(Chunk currentChunk) {
+		this.currentChunk = currentChunk;
+	}
+	
+	
 }
